@@ -1,0 +1,36 @@
+<div class="loginSection">
+    <mat-grid-list cols="2" class="whiteBgSec">
+        <mat-grid-tile class="loginLeftSec">
+            <mat-card class="loginCard">
+                <mat-card-title>Login</mat-card-title>
+            
+            <mat-card-content>
+            <form [formGroup]="loginForm" id="loginForm">
+                    <div>
+                        <mat-form-field>
+                            <mat-label>
+                                Email
+                            </mat-label>
+                            <input matInput placeholder="Enter Email Address"/>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field>
+                            <mat-label>
+                                Password
+                            </mat-label>
+                            <input matInput placeholder="Enter Password"/>
+                        </mat-form-field>
+                    </div>
+                <div>
+                    <button mat-button>Submit</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile class="loginRightSec">
+            <img src="../../assets/login-right-img-1.jpg" alt="login display image"/>
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>
