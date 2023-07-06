@@ -1,0 +1,7 @@
+<div class="productsPopup">
+   <h3>{{choosenProduct.title}}</h3>
+   <img [src]="choosenProduct.images[0]"/>
+   <p>DETAILS: {{choosenProduct.description}}</p>
+   <p>PRICE: ${{choosenProduct.price}}</p>
+   <p style="display:flex;"><star-rating [starType]="'svg'" [rating]="choosenProduct.rating"></star-rating></p>
+</div>

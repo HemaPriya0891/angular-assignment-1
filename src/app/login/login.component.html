@@ -1,17 +1,24 @@
 <div class="loginSection">
     <mat-grid-list cols="2" class="whiteBgSec">
+        <div class="whiteBgDiv">
+            <img class="logo" src="../../assets/images/1afdc8145b70438993615ada1b4687a0.png">
         <mat-grid-tile class="loginLeftSec">
             <mat-card class="loginCard">
                 <mat-card-title>Login</mat-card-title>
             
             <mat-card-content>
-            <form [formGroup]="loginForm" id="loginForm">
+            <form [formGroup]="loginForm" id="loginForm" (ngSubmit)="submitHandler()">
                     <div>
                         <mat-form-field>
                             <mat-label>
                                 Email
                             </mat-label>
-                            <input matInput placeholder="Enter Email Address"/>
+                            <input matInput placeholder="Enter Email Address" formControlName="email" required/>
+                            
+                                <mat-error *ngIf = "loginForm.controls['email'].hasError('required')"> Please enter Email </mat-error>
+                                <mat-error *ngIf = "loginForm.controls['email'].hasError('pattern')"> Please enter valid Email </mat-error>
+                             
+                            
                         </mat-form-field>
                     </div>
                     <div>
@@ -19,18 +26,22 @@
                             <mat-label>
                                 Password
                             </mat-label>
-                            <input matInput placeholder="Enter Password"/>
+                            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                            <mat-error *ngIf="loginForm.controls['password'].hasError('required')"> Please enter password </mat-error>
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         </mat-form-field>
                     </div>
                 <div>
-                    <button mat-button>Submit</button>
+                    <button mat-button type="submit">Submit</button>
+                    <button mat-button (click)="cancelLogin()">Cancel</button>
                 </div>
             </form>
         </mat-card-content>
     </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="loginRightSec">
-            <img src="../../assets/login-right-img-1.jpg" alt="login display image"/>
+            <img src="../../assets/images/login-right-img-1.jpg" alt="login display image"/>
         </mat-grid-tile>
+    </div>
       </mat-grid-list>
 </div>

@@ -1,0 +1,42 @@
+<app-header></app-header>
+<app-mat-spinner-overlay
+  *ngIf="isLoading"
+  [overlay]="true"
+></app-mat-spinner-overlay>
+<div class="dashboard">
+    <div class="filterSection">
+  <h4>Filter by Category</h4> 
+  <mat-select class="selectCategories" [(value)]="selectedCategory" (selectionChange)="filterProducts($event.value)">
+    <mat-option value="all">All</mat-option>
+    <mat-option *ngFor="let category of categories" [value]="category">
+      {{ category }}
+    </mat-option>
+  </mat-select>
+</div>
+  <mat-grid-list
+    cols="3"
+    gutterSize="25px"
+    class="dashboardSec"
+  >
+    <mat-grid-tile *ngFor="let item of filteredProducts" class="tile">
+      <p class="tileTitle">{{ item.title }}</p>
+      <mat-icon class="mat-icon-favourite" (click)="addToFavorites(item)">
+        {{ item.favoriteIcon }}
+      </mat-icon>
+      <img
+        [src]="item.images[0]"
+        class="imageSize"
+        (click)="showDetails(item)"
+      />
+      <div class="tileFooter">
+        <span class="price">$ {{ item.price }}</span>
+        <star-rating [starType]="'svg'" [rating]="item.rating"></star-rating>
+        <button mat-button class="mat-button">Add to Cart</button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<!-- 
+<div class="overlayPopup">
+    <app-products-quick-view [product]="hoveredProduct"></app-products-quick-view>
+</div> -->
