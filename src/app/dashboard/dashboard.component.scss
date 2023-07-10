@@ -1,13 +1,14 @@
+@import "../../assets/scss/variables";
 mat-grid-tile{
-    background: white;
-    box-shadow: #003a6c 4px 1px 18px -6px;
+    background: $whiteColor;
+    box-shadow: $tileBoxShadow 4px 1px 18px -6px;
     border-radius: 10%;
     cursor: pointer;
     p.tileTitle{
         text-align: center;
-        font-size: 0.9rem;
+    font-size: 0.9rem;
         font-weight: bold;
-        color: #000000;
+        color: $blackColor;
     }
     ::ng-deep .mat-grid-tile-content{
         top: 16px !important;
@@ -33,7 +34,7 @@ mat-grid-tile{
     cursor: pointer;
 }
 .price{
-    color:#575757;
+    color:$greyColor;
     font-weight: bold;
     padding: 10px 0px;
     display: block;
@@ -41,10 +42,10 @@ mat-grid-tile{
 .selectCategories{
     width:10% !important;   
     margin-bottom: 2%;
-    border-bottom: 1px solid #575757;
+    border-bottom: 1px solid $greyColor;
     padding: 5px;
     margin-left: 1%;
-    color: #575757;
+    color: $greyColor;
     font-weight: bold;
 }
 .tileFooter{
@@ -52,7 +53,7 @@ mat-grid-tile{
     // margin: 0 auto;
     text-align: center;
     // background:linear-gradient(-358deg, #eaeaea, #575757);
-    background-color: #e9f5ff;
+    background-color: $tileFooterBg;
     // border-radius: 20px 0px 20px 0px;
 }
 

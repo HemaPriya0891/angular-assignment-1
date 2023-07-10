@@ -1,13 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~css-star-rating/scss/star-rating';
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url('./assets/fonts/Roboto-Regular.ttf');
-}
-@font-face {
-  font-family: 'Roboto Bold';
-  src: url('./assets/fonts/Roboto-Bold.ttf');
-}
+@import '../src/assets/scss/fonts';
 html,
 body {
   height: 100%;

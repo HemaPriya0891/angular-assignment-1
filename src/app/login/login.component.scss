@@ -1,3 +1,4 @@
+@import '../../assets/scss/_variables.scss';
 .loginSection{
     background: url('../../assets/images/black-friday-elements-assortment.jpg') no-repeat 0 -212px;
     background-size: cover;
@@ -11,8 +12,8 @@
             min-height: 630px;
             position: absolute;
             top: 10%;
-            background-color: white;
-            box-shadow: #575757 5px -9px 29px -8px;
+            background-color: $whiteColor;
+            box-shadow: $greyColor 5px -9px 29px -8px;
             // border: 20px solid #575757;
             border-radius: 10%;
         }
@@ -27,7 +28,7 @@
     .loginCard{
         padding:20% !important;
         top:30px !important;
-        border:10px solid #FFB24D;
+        border:10px solid $primaryColor;
     }
 } 
 
@@ -45,6 +46,6 @@
     /* margin-top: 0%; */
     top: -20%;
     position: absolute;
-    border: 10px dashed #FFB24D;
+    border: 10px dashed $primaryColor;
     width:16%;
 }

@@ -1,3 +1,5 @@
+
+@import '../../assets/scss/variables';
 .headerSec{
     height:200px;
     width:100%;
@@ -5,14 +7,13 @@
     // background-image: linear-gradient(-21deg, #5c00e6, transparent);
     background: url(../../assets/images/front-view-woman-with-shopping-bag-concept.jpg) no-repeat 0 47%;
     background-size: cover;
-    // background-color: #29A0B1;
 }
 
 .mat-grid-tile{
     padding-top: 5% !important;
     overflow: unset;
     h3{
-        color:#575757;
+        color:$greyColor;
     }
 }
 .logo{
@@ -20,7 +21,7 @@
     margin-top: 8%;
     // margin-right: 70%;
     border-radius: 50%;
-    border:10px dashed #FFB24D;
+    border:10px dashed $primaryColor;
 }
 
 ::ng-deep .headerLogoSec .mat-grid-tile-content{
@@ -29,7 +30,7 @@
 
 .logout{
     margin-left:65%;
-    color:#575757;
+    color:$greyColor;
 
 }
 
